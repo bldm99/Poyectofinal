@@ -1,0 +1,22 @@
+
+h1{
+    background: #101214;
+    color: #0dcaf0;
+}table, th ,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+ }
+ th,td{
+     padding: 5px;
+     color: #0dcaf0;
+ }
+ .lugares{
+     text-align: center;
+ }
+
+table{
+    background: #1c1f23;
+ }
+
+
