@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Productos;
 
 class HomeController extends Controller
 {
@@ -22,7 +24,15 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
+
     {
-        return view('home');
+        $prueva= User::all();
+        $pro = Productos::all();
+        return view('principal',compact('prueva','pro'));
     }
+
+    /*public function p()
+    {
+        return view('principal');
+    }*/
 }

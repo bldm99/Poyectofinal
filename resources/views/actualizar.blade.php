@@ -17,56 +17,47 @@
 <body>
 
 
-    <div class="card">
-        <h5 class="card-header">Featured</h5>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+
 
     <div class="container">
-        <h4>registrar</h4>
+        <h4>Actualizar datos</h4>
         <div class="row">
             <div class="col -xl-12">
 
 
-                <form method="post" action="{{url('add')}} " enctype="multipart/form-data">
+                <form method="Post" action="{{route('prueva.update',$pru->id)}}">
 
 
-                @csrf
+                    @csrf
+                    @method("PUT")
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" name="nombre">
+                        <input type="text" class="form-control" name="nombre" required value="{{$pru->nombre}}">
                     </div>
                     <div class="form-group">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" name="apellido">
+                        <input type="text" class="form-control" name="apellido" required value="{{$pru->apellido}}">
                     </div>
                     <div class="form-group">
                         <label for="sexo">Sexo</label>
-                        <input type="text" class="form-control" name="sexo">
+                        <input type="text" class="form-control" name="sexo" required value="{{$pru->sexo}}">
                     </div>
                     <div class="form-group">
                         <label for="edad">Edad</label>
-                        <input type="text" class="form-control" name="edad">
+                        <input type="text" class="form-control" name="edad" required value="{{$pru->edad}}">
                     </div>
                     <div class="form-group">
-                        <label for="foto">Imagen</label>
-                        <input type="file" class="form-control" name="imagen">
+                        <button type="submit" class="btn btn-success">Actualizar</button>
+                        <a href="{{route('prueva.listarprueva')}}" class="btn btn-warning">Volver</a>
                     </div>
-                    <div class="form-group">
 
-                        <button type="submit" class="btn btn-success">Submit</button>
+                </form>
 
-                    </div>
             </div>
-
         </div>
-
     </div>
-    <a href="{{route('prueva.listarprueva')}}"> Lista usuarios</a>
+
+
 
 
 

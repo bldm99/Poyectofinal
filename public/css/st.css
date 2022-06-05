@@ -5,18 +5,35 @@ h1{
 }table, th ,td{
     border: 1px solid black;
     border-collapse: collapse;
+     padding-left: 10px;
+     padding-right: 10px;
 
  }
- th,td{
-     padding: 5px;
+ th,td {
+
      color: #0dcaf0;
+     padding-left: 10px;
+     padding-right: 10px;
  }
  .lugares{
      text-align: center;
  }
 
-table{
-    background: #1c1f23;
- }
+p{
+    color: black;
+}
 
 
+
+table td:first-child {
+    width: 150px;
+}
+table td:nth-child(2) {
+    width: 150px;
+}
+table td:nth-child(3) {
+    width: 150px;
+}
+table td:nth-child(4) {
+    width: 150px;
+}

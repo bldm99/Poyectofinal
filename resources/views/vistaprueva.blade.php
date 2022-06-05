@@ -33,6 +33,7 @@
             <th>Edad</th>
 
 
+
             </thead>
 
             <tbody>
@@ -46,6 +47,10 @@
                     <td>{{ $item1->apellido }}</td>
                     <td>{{ $item1->sexo }}</td>
                     <td>{{ $item1->edad }}</td>
+                    <td>
+                        <img src="{{$item1->imagen}}" width="10%" >
+                    </td>
+
 
 
 
@@ -104,6 +109,9 @@
                             <th>Apellido</th>
                             <th>Sexo</th>
                             <th>Edad</th>
+                            <th>Foto</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                             </thead>
 
                             <tbody>
@@ -114,6 +122,21 @@
                                     <td>{{ $item1->apellido }}</td>
                                     <td>{{ $item1->sexo }}</td>
                                     <td>{{ $item1->edad }}</td>
+                                    <td>
+                                        <img src="{{$item1->imagen}}" width="10%" >
+                                    </td>
+
+                                    <td><a href="{{route('prueva.editar',$item1->id)}}" class="btn btn-warning" >Editar</a></td>
+
+                                    <td>
+                                        <form action="{{route('prueva.destroy', $item1->id)}}" method="Post" >
+                                            @csrf
+                                            <input name="_method" type="hidden" value="DELETE">
+                                            <button class="btn btn-danger" type="submit">Eliminar</button>
+                                        </form>
+                                    </td>
+
+
                                 </tr>
                             @endforeach
                             </tbody>
@@ -137,6 +160,11 @@
 
 
     </div>
+    @foreach($fot as $item1)
+
+        <img src="{{$item1->imagen}}" width="10%">
+
+    @endforeach
 
 
 

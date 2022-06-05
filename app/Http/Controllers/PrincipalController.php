@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Principal;
 use Illuminate\Http\Request;
 Use App\Models\User;
+use App\Models\Productos;
+
 
 class PrincipalController extends Controller
 {
@@ -13,8 +15,12 @@ class PrincipalController extends Controller
     {
 
         $prueva= User::all();
-        return view('principal',compact('prueva'));
+        $pro = Productos::all();
+        return view('principal',compact('prueva','pro'));
     }
+
+
+
 
 
 

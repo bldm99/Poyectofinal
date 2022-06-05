@@ -1,3 +1,6 @@
+
+
+
 @extends('layouts/plantilla')
 
 @section('tituloPagina', 'Registrando')
@@ -17,40 +20,45 @@
 <body>
 
 
-    <div class="card">
-        <h5 class="card-header">Featured</h5>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-    </div>
+
 
     <div class="container">
-        <h4>registrar</h4>
+        <h4>Agrgar nuevo producto</h4>
         <div class="row">
             <div class="col -xl-12">
 
 
-                <form method="post" action="{{url('add')}} " enctype="multipart/form-data">
+                <form method="post" action="{{url('addpro')}} " enctype="multipart/form-data">
 
 
-                @csrf
+                    @csrf
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" name="nombre">
                     </div>
                     <div class="form-group">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" name="apellido">
+                        <label for="categoria">Categoria</label>
+                        <input type="text" class="form-control" name="categoria">
                     </div>
                     <div class="form-group">
-                        <label for="sexo">Sexo</label>
-                        <input type="text" class="form-control" name="sexo">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control" name="descripcion">
                     </div>
                     <div class="form-group">
-                        <label for="edad">Edad</label>
-                        <input type="text" class="form-control" name="edad">
+                        <label for="precio">Precio</label>
+                        <input type="text" class="form-control" name="precio">
+                    </div>
+                    <div class="form-group">
+                        <label for="stock">Stock</label>
+                        <input type="text" class="form-control" name="stock">
+                    </div>
+                    <div class="form-group">
+                        <label for="oferta">Oferta</label>
+                        <input type="text" class="form-control" name="oferta">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_vnc">Fecha de Vencimiento</label>
+                        <input type="date" class="form-control" name="fecha_vnc">
                     </div>
                     <div class="form-group">
                         <label for="foto">Imagen</label>
@@ -58,7 +66,7 @@
                     </div>
                     <div class="form-group">
 
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" class="btn btn-success">Registrar</button>
 
                     </div>
             </div>
@@ -79,3 +87,4 @@
 
 
 @endsection
+

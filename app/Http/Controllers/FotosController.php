@@ -38,7 +38,7 @@ class FotosController extends Controller
 
 
 
-    public function cargar_foto()
+   /* public function cargar_foto()
     {
         if(isset($_REQUEST['btn'])){
 
@@ -46,13 +46,14 @@ class FotosController extends Controller
             $nomb = $_FILES['foto']['name'];
             $temporal = $_FILES['foto']['tmp_name'];
             $carpeta = 'fotos';
+
             $ruta = $carpeta.'/'.$nomb;
             move_uploaded_file($temporal,$carpeta.'/'.$nomb);
 
 
         }
         return view('subirfoto');
-    }
+    }*/
 
 
 
